@@ -21912,7 +21912,7 @@ __webpack_require__.r(__webpack_exports__);
         title = _usePage$props$value$.title,
         content = _usePage$props$value$.content,
         image_url = _usePage$props$value$.image_url,
-        id = _usePage$props$value$.id;
+        _id = _usePage$props$value$._id;
     form.title = title;
     form.content = content; // const route = inject('route');
 
@@ -21922,7 +21922,7 @@ __webpack_require__.r(__webpack_exports__);
 
     function submit() {
       _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia.post(route('post.update', {
-        'id': id
+        'id': _id
       }), form, {
         forceFormData: true
       });

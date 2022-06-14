@@ -56,7 +56,7 @@ export default {
         });
 
         // retrieve post prop
-        const {title, content, image_url, id } = usePage().props.value.post;
+        const {title, content, image_url, _id } = usePage().props.value.post;
         form.title = title;
         form.content = content;
 
@@ -67,7 +67,7 @@ export default {
         }
 
         function submit() {
-            Inertia.post(route('post.update', {'id': id}), form, {
+            Inertia.post(route('post.update', {'id': _id}), form, {
                 forceFormData: true
             });
         }
