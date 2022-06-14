@@ -5,6 +5,9 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
+if (env('APP_ENV') == 'production') {
+    \URL::forceScheme('https');
+}
 
 Route::group(['middleware' => 'guest'], function()
 {
