@@ -9,15 +9,9 @@ use Inertia\Inertia;
 
 class PostsController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware("auth")->except(["index"]);
-    }
-
     public function index()
     {
         $posts = Post::orderBy('id', 'DESC')->paginate(10);
-        // dd($posts);
         return Inertia::render('Posts/Index', [
             "posts" => $posts
         ]);
